@@ -41,8 +41,8 @@ function decode(expr) {
     let words = expr.match(/.{1,10}/g);
     words = words.map(element => {
       return (element === '**********') 
-                        ? element = ' '
-                        : element = element.replace(/10/g, '.').replace(/11/g, '-').replace(/00/g, '');
+                        ? ' '
+                        : element.replace(/10/g, '.').replace(/11/g, '-').replace(/00/g, '');
     });
     words = words.map(element => {
       return (element === ' ')
